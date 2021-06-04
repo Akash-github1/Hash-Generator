@@ -1,20 +1,13 @@
 import sys , hashlib , zlib , time , random , os
 
 if sys.platform == 'win32':
-    white  = '\033[0m'
-    red    = '\033[31;1m'
-    green  = '\033[32;1m'
-    yellow = '\033[33;1m'
-    blue   = '\033[34;1m'
-    pink   = '\033[35;1m'
-    cyan   = '\033[36;1m'
-    # white  = ''
-    # red    = ''
-    # green  = ''
-    # yellow = ''
-    # blue   = ''
-    # pink   = ''
-    # cyan   = ''
+    white  = ''
+    red    = ''
+    green  = ''
+    yellow = ''
+    blue   = ''
+    pink   = ''
+    cyan   = ''
     r = (white, red, green, yellow, blue, pink, cyan)
     z = random.choice(r)
 elif sys.platform == 'linux' or sys.platform == 'linux2':
@@ -25,9 +18,11 @@ elif sys.platform == 'linux' or sys.platform == 'linux2':
     blue   = '\033[34;1m'
     pink   = '\033[35;1m'
     cyan   = '\033[36;1m'
+    r = (white, red, green, yellow, blue, pink, cyan)
+    z = random.choice(r)
 
 try:
-    import passlib, progressbar
+    import passlib
 except ImportError:
     print(red+'\n['+white+'!'+red+'] '+green+'module '+white+'passlib or progressbar'+green+'not installed'+white+'\n')
     sys.exit()
