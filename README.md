@@ -12,4 +12,4 @@ $ python hash.py
 ```
 
 # Screenshot
-<img src="screenshot/Screenshot.png" />
+<img src="Hash-Generator/screenshot/Screenshot.png" />
